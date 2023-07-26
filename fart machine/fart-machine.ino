@@ -3,19 +3,16 @@ int buttonState = 0;
 int buttonPin = 4;
 
 void setup() {
-pinMode(12,OUTPUT);
-pinMode(buttonPin,OUTPUT);
+  pinMode(12,OUTPUT);
+  pinMode(buttonPin,OUTPUT);
 }
 
 void loop() {
   buttonState = digitalRead(buttonPin);
+  delay(100);
   if (buttonState == HIGH){
-    digitalWrite(12,HIGH);
+    // play sound on a loop
   } else{
-    digitalWrite(12,LOW);
+    // stop play sound
   }
-// 
-// delay(100);
-// 
-// delay(100);
 }
